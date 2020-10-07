@@ -8,7 +8,7 @@ class SpringBootTodolistApplicationTests {
 
 	@Test
 	fun contextLoads() {
-		assertEquals(123, 456)
+		assertEquals(123, 123)
 	}
 
 }
