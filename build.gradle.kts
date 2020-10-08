@@ -1,3 +1,4 @@
+import com.adarshr.gradle.testlogger.theme.ThemeType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -5,6 +6,12 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.9.RELEASE"
 	kotlin("jvm") version "1.3.61"
 	kotlin("plugin.spring") version "1.3.61"
+	id("com.adarshr.test-logger") version "2.1.0"
+}
+
+testlogger {
+	// pick a theme - mocha, standard, plain, mocha-parallel, standard-parallel or plain-parallel
+	theme = ThemeType.MOCHA
 }
 
 group = "com.example"
