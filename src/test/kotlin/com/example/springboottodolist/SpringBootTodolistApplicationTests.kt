@@ -1,6 +1,7 @@
 package com.example.springboottodolist
 
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
@@ -8,8 +9,19 @@ import org.springframework.boot.test.context.SpringBootTest
 class SpringBootTodolistApplicationTests {
 
 	@Test
-	fun contextLoads() {
-		assertEquals(123, 789)
+	fun successExample() {
+		assertEquals(123, 123)
+	}
+	
+	@Test
+	fun failExample() {
+		assertEquals(123, 444)
+	}
+	
+	@Test
+	@DisplayName("This is a test with @DisplayName annotation")
+	fun displayNameExample() {
+		assertEquals(123, 123)
 	}
 
 }
